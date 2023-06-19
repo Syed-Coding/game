@@ -24,7 +24,7 @@ function App() {
 
     if (originalval === Number(userval)) {
       alert(
-        `CONGRAGULATIONS 😊😊😊!!! GUESS RIGHT , Original number is ${originalval}`
+        `CONGRAGULATIONS 😊😊😊!!! YOU GUESSED RIGHT , Original number is ${originalval}`
       );
       setOriginalVal(Math.floor(Math.random() * 101));
       setConfettiExplo(true);
@@ -32,13 +32,16 @@ function App() {
       setHideLevelBtns(true);
       // setUserVal("");
     } else {
-      alert("SRY GUESSED WRONG");
-      setUserVal("");
       if (userval > originalval) {
-        alert("Your Guess Is Far From Original Value ");
+        alert(
+          "SORRY YOU GUESSED WRONG , Your Guess Is Far From Original Value "
+        );
       } else {
-        alert("Your Guess Is Low From Original Value ");
+        alert(
+          "SORRY YOU GUESSED WRONG , Your Guess Is Low From Original Value "
+        );
       }
+      setUserVal("");
       setretries(retries - 1);
     }
   };
