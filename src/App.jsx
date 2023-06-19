@@ -28,7 +28,7 @@ function App() {
 
         backdrop: `
     rgba(0,0,123,0.4)
-    url("/public/babywrath.gif")
+    url("/babywrath.gif")
     top
     no-repeat
   `,
@@ -47,7 +47,7 @@ function App() {
 
           backdrop: `
     rgba(0,0,123,0.4)
-    url("/public/kpaclalitha-vietnam-colony_converted.gif")
+    url("/kpaclalitha-vietnam-colony_converted.gif")
     top
     no-repeat
   `,
@@ -61,7 +61,7 @@ function App() {
 
           backdrop: `
     rgba(0,0,123,0.4)
-    url("/public/funny-expressions-jagathy.gif")
+    url("/funny-expressions-jagathy.gif")
     top
     no-repeat
   `,
