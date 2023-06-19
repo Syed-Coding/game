@@ -55,7 +55,7 @@ function App() {
       )}
 
       <div className="center">
-        <h1>GUESSING GAME</h1>
+        <h1>GUESSING THE NUMBER</h1>
         <h2 style={{ color: "green" }}>
           Guess a number from 1-100. Guess right for an APPLAUSE🎊🎊🎊!
         </h2>
