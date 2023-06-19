@@ -14,26 +14,28 @@ function App() {
       ? setretries(7)
       : level === "medium"
       ? setretries(5)
+      : level === "hard"
+      ? setretries(2)
       : setretries(2);
   }, [level]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log("user", userval);
-    // console.log("org", originalval);
+    console.log("user", userval);
+    console.log("org", originalval);
 
     if (originalval === Number(userval)) {
-      alert("guess right");
+      alert(`GUESS RIGHT , Original number is ${originalval}`);
       setOriginalVal(Math.floor(Math.random() * 101));
       setLevel("");
       setretries(2);
       setUserVal("");
     } else {
-      alert("guessed wrong");
+      alert("SRY GUESSED WRONG");
       if (userval > originalval) {
-        alert("your guess is far from original value ");
+        alert("Your Guess Is Far From Original Value ");
       } else {
-        alert("your guess is low from original value ");
+        alert("Your Guess Is Low From Original Value ");
       }
       setretries(retries - 1);
     }
