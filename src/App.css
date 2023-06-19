@@ -26,3 +26,43 @@ body {
   background-color: black;
   color: white;
 }
+
+ol {
+  padding: 0;
+  margin: 0;
+  max-width: 700px;
+  position: relative;
+  list-style: none;
+}
+
+ol::before {
+  content: "";
+  width: 0.5rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 8%;
+  background: greenyellow;
+  z-index: -1;
+}
+
+li {
+  padding: 1.5rem 1.5rem 1rem;
+  border-radius: 1.5rem;
+  background: green;
+}
+
+li + li {
+  margin-top: 1rem;
+}
+
+::marker {
+  font-weight: 600;
+  color: tomato;
+  font-size: 1.8rem;
+}
+
+.gamerules {
+  margin-top: 32px;
+  margin-left: 415px;
+}
