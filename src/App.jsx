@@ -57,7 +57,7 @@ function App() {
       <div className="center">
         <h1>GUESS THE NUMBER</h1>
         <h2 style={{ color: "green" }}>
-          Guess a number from 1-100. Guess right for an APPLAUSE🎊🎊🎊!
+          Guess a number from 0-100. Guess right for an APPLAUSE🎊🎊🎊!
         </h2>
         {hidelevelbtns && (
           <Level
@@ -80,7 +80,7 @@ function App() {
             <br></br>
 
             <button className="btn btn-lg btn-primary" type="submit">
-              GUESS MEE {retries < 2 ? "😱" : "😊"}
+              {retries <= 2 ? "OH !!! No 😱" : "GUESS ME 😊"}
             </button>
           </form>
         )}

@@ -4,7 +4,7 @@ export const Level = ({ setretries, setHideLevelBtns }) => {
       ? setretries(8)
       : e.target.name === "medium"
       ? setretries(5)
-      : setretries(2);
+      : setretries(3);
     setHideLevelBtns(false);
   };
   return (
