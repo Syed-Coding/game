@@ -7,18 +7,18 @@ function App() {
     Math.floor(Math.random() * 101)
   );
   const [userval, setUserVal] = useState("");
-  const [retries, setretries] = useState(2);
+  const [retries, setretries] = useState("Select The Level Of Difficulty");
   const [hidelevelbtns, setHideLevelBtns] = useState(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("user", userval);
-    console.log("org", originalval);
+    // console.log("user", userval);
+    // console.log("org", originalval);
 
     if (originalval === Number(userval)) {
       alert(`GUESS RIGHT , Original number is ${originalval}`);
       setOriginalVal(Math.floor(Math.random() * 101));
-      setretries(2);
+      setretries("Play Again? Select The Level Of Difficulty ");
       setHideLevelBtns(true);
       setUserVal("");
     } else {
@@ -40,7 +40,7 @@ function App() {
           setHideLevelBtns={setHideLevelBtns}
         ></Level>
       )}
-      {retries ? (
+      {retries && !hidelevelbtns && (
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -53,9 +53,9 @@ function App() {
           />
           <button type="submit">Guess me</button>
         </form>
-      ) : (
-        <p>Maximum tries exceeded</p>
       )}
+      {retries === 0 && <p>Maximum tries exceeded</p>}
+
       <p>No Of Retries: {`${retries}`}</p>
       {!retries && <p> Orginal number is {`${originalval}`}</p>}
     </>
