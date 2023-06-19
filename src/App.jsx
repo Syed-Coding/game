@@ -79,7 +79,7 @@ function App() {
             <br></br>
 
             <button className="btn btn-lg btn-primary" type="submit">
-              GUESS MEE 😊
+              GUESS MEE {retries < 2 ? "😱" : "😊"}
             </button>
           </form>
         )}
