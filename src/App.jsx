@@ -17,7 +17,7 @@ function App() {
     e.preventDefault();
     if (userval === "") return alert("PLEASE TYPE YOUR GUESS AND CONTINUE");
     // console.log("user", userval);
-    console.log("org", originalval);
+    // console.log("org", originalval);
 
     if (originalval === Number(userval)) {
       Swal.fire({
@@ -61,7 +61,7 @@ function App() {
 
           backdrop: `
     rgba(0,0,123,0.4)
-    url("/funny-expressions-jagathy.gif")
+    url("/spooky-valak.gif")
     top
     no-repeat
   `,

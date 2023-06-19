@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export const Hint = ({ originalval }) => {
-  console.log("hint", originalval);
+  // console.log("hint", originalval);
   const [openHont, setopenHint] = useState(false);
 
   const hint =
