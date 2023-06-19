@@ -25,6 +25,7 @@ function App() {
     if (originalval === Number(userval)) {
       alert("guess right");
       setOriginalVal(Math.floor(Math.random() * 101));
+      setLevel("");
       setretries(2);
       setUserVal("");
     } else {
@@ -39,7 +40,7 @@ function App() {
   };
   return (
     <>
-      <Level setLevel={setLevel}></Level>
+      {!level && <Level setLevel={setLevel}></Level>}
       {retries ? (
         <form onSubmit={handleSubmit}>
           <input
