@@ -54,8 +54,8 @@ function App() {
       ) : (
         <p>Maximum tries exceeded</p>
       )}
-
       <p>no of reties: {`${retries}`}</p>
+      {!retries && <p> Orginal number is {`${originalval}`}</p>}
     </>
   );
 }
