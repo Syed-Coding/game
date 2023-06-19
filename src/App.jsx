@@ -19,8 +19,8 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("user", userval);
-    console.log("org", originalval);
+    // console.log("user", userval);
+    // console.log("org", originalval);
 
     if (originalval === Number(userval)) {
       alert("guess right");
