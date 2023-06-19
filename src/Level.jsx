@@ -9,14 +9,26 @@ export const Level = ({ setretries, setHideLevelBtns }) => {
   };
   return (
     <>
-      <button name="easy" onClick={handleCLick}>
-        Easy
+      <button
+        className="btn btn-primary btn-lg"
+        name="easy"
+        onClick={handleCLick}
+      >
+        Easy 😃
       </button>
-      <button name="medium" onClick={handleCLick}>
-        Medium
+      <button
+        className="btn btn-primary btn-lg"
+        name="medium"
+        onClick={handleCLick}
+      >
+        Medium 🔥
       </button>
-      <button name="hard" onClick={handleCLick}>
-        Hard
+      <button
+        className="btn btn-primary btn-lg"
+        name="hard"
+        onClick={handleCLick}
+      >
+        Hard 💀
       </button>
     </>
   );
