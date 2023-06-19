@@ -18,6 +18,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!userval) return alert("PLEASE TYPE YOUR GUESS AND CONTINUE");
     // console.log("user", userval);
     // console.log("org", originalval);
 
