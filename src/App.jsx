@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import { Level } from "./Level";
 
@@ -7,17 +7,8 @@ function App() {
     Math.floor(Math.random() * 101)
   );
   const [userval, setUserVal] = useState("");
-  const [level, setLevel] = useState("");
-  const [retries, setretries] = useState("");
-  useEffect(() => {
-    level === "easy"
-      ? setretries(7)
-      : level === "medium"
-      ? setretries(5)
-      : level === "hard"
-      ? setretries(2)
-      : setretries(2);
-  }, [level]);
+  const [retries, setretries] = useState(2);
+  const [hidelevelbtns, setHideLevelBtns] = useState(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,11 +18,12 @@ function App() {
     if (originalval === Number(userval)) {
       alert(`GUESS RIGHT , Original number is ${originalval}`);
       setOriginalVal(Math.floor(Math.random() * 101));
-      setLevel("");
       setretries(2);
+      setHideLevelBtns(true);
       setUserVal("");
     } else {
       alert("SRY GUESSED WRONG");
+      setUserVal("");
       if (userval > originalval) {
         alert("Your Guess Is Far From Original Value ");
       } else {
@@ -42,14 +34,21 @@ function App() {
   };
   return (
     <>
-      {!level && <Level setLevel={setLevel}></Level>}
+      {hidelevelbtns && (
+        <Level
+          setretries={setretries}
+          setHideLevelBtns={setHideLevelBtns}
+        ></Level>
+      )}
       {retries ? (
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            placeholder="guess the number"
+            placeholder="Guess The Number"
             value={userval}
-            onChange={(e) => setUserVal(e.target.value)}
+            onChange={(e) =>
+              setUserVal(e.target.value > 100 ? 0 : e.target.value)
+            }
             autoFocus
           />
           <button type="submit">Guess me</button>
@@ -57,7 +56,7 @@ function App() {
       ) : (
         <p>Maximum tries exceeded</p>
       )}
-      <p>no of reties: {`${retries}`}</p>
+      <p>No Of Retries: {`${retries}`}</p>
       {!retries && <p> Orginal number is {`${originalval}`}</p>}
     </>
   );
