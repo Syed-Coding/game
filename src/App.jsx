@@ -99,7 +99,7 @@ function App() {
           <form onSubmit={handleSubmit}>
             <input
               className="number-input"
-              type="text"
+              type="number"
               placeholder="Guess The Number"
               value={userval}
               onChange={(e) =>
