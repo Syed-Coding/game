@@ -4,7 +4,7 @@ export const Level = ({ setretries, setHideLevelBtns, setUserDifficulty }) => {
       ? (setretries(8), setUserDifficulty(e.target.name))
       : e.target.name === "medium"
       ? (setretries(5), setUserDifficulty(e.target.name))
-      : setretries(3);
+      : (setretries(3), setUserDifficulty(e.target.name));
     setHideLevelBtns(false);
   };
   return (
@@ -31,16 +31,27 @@ export const Level = ({ setretries, setHideLevelBtns, setUserDifficulty }) => {
         Hard 💀
       </button>
 
-      <h4 style={{ padding: "1px", marginTop: "35px" }}>
-        GAME RULES ARE MENTIONED BELOW
-      </h4>
-
       <div className="gamerules">
         <ol>
-          <li>SELECT ONE MODE TO PLAY THE GAME</li>
-          <li>EASY MODE WITH 8 GUESSES AND WILL GET HINT FROM GUESS 5</li>
-          <li>MEDIUM MODE WITH 5 GUESSES AND WILL GET HINT FROM GUESS 3</li>
-          <li>HARD MODE WITH 3 GUESSES AND WILL NOT GET ANY HINT</li>
+          <li
+            style={{ color: "#a2c0e4", fontSize: "20px", fontWeight: "bold" }}
+          >
+            GAME RULES ARE MENTIONED BELOW
+          </li>
+          <li>
+            EASY MODE WITH 8 GUESSES AND WILL GET HINT FROM GUESS 5, ALSO
+            DISPLAY YOUR GUESSED VALUES.
+          </li>
+          <li>
+            MEDIUM MODE WITH 5 GUESSES AND WILL GET HINT FROM GUESS 3, ALSO
+            DISPLAY YOUR GUESSED VALUES.
+          </li>
+          <li>
+            HARD MODE WITH 3 GUESSES AND
+            <span style={{ color: "blue" }}> WILLNOT </span> GET ANY HINT,
+            <span style={{ color: "blue" }}> WILLNOT </span>
+            DISPLAY YOUR GUESSED VALUES.
+          </li>
         </ol>
       </div>
     </>
