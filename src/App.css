@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
 .center {
   margin: 0 auto;
   text-align: center;
@@ -27,42 +31,92 @@ body {
   color: white;
 }
 
-ol {
-  padding: 0;
-  margin: 0;
-  max-width: 700px;
-  position: relative;
-  list-style: none;
-}
-
-ol::before {
-  content: "";
-  width: 0.5rem;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 8%;
-  background: greenyellow;
-  z-index: -1;
-}
-
-li {
-  padding: 1.5rem 1.5rem 1rem;
-  border-radius: 1.5rem;
-  background: green;
-}
-
-li + li {
-  margin-top: 1rem;
-}
-
 ::marker {
   font-weight: 600;
   color: tomato;
   font-size: 1.8rem;
 }
 
-.gamerules {
-  margin-top: 32px;
-  margin-left: 415px;
+/* modals */
+.popup {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.popup .popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  padding: 35px;
+  text-align: justify;
+  background: #eee;
+  color: black;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+.popup .close-popup {
+  width: 90px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  padding: 3px;
+  font-weight: 300;
+  background-color: green;
+  border-radius: 9px;
+}
+.popup:target {
+  display: block;
+}
+ul li {
+  margin-top: 5px;
+}
+
+.final-popup {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.final-popup .final-popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  padding: 35px;
+  text-align: justify;
+  color: #eee;
+  background-color: black;
+  border: 2px solid white;
+}
+.final-popup-content p {
+  font-size: 15px;
+}
+
+.final-popup .final-close-popup {
+  width: 122px;
+  position: absolute;
+  top: 35px;
+  right: 90px;
+  font-size: 18px;
+  padding: 3px;
+  font-weight: 300;
+  background-color: green;
+  border-radius: 9px;
+}
+.final-popup:target {
+  display: block;
 }
