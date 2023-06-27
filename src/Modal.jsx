@@ -2,7 +2,6 @@ export const Modal = ({ setOpenModal }) => {
   return (
     <div className="popup">
       <div className="popup-content">
-        <h1 style={{ fontWeight: "bold" }}>READ GAME RULES CAREFULLY</h1>
         <ul>
           <li>
             <strong>EASY MODE</strong> WITH 8 GUESSES AND WILL GET HINT FROM

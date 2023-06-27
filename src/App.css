@@ -67,7 +67,7 @@ body {
 .popup .close-popup {
   width: 90px;
   position: absolute;
-  top: 20px;
+  top: 3px;
   right: 20px;
   font-size: 18px;
   padding: 3px;
