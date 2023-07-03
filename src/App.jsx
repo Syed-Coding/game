@@ -22,10 +22,13 @@ function App() {
   const [loader, setLoader] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       setOpenModal(true);
       setLoader(false);
     }, 3000);
+    return () => {
+      clearTimeout(timeout);
+    };
   }, []);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -42,7 +45,7 @@ function App() {
 
         backdrop: `
     rgba(0,0,123,0.4)
-    url("/dicap.gif")
+    url("../src/images/dicap.gif")
     top
     no-repeat
   `,
@@ -63,7 +66,7 @@ function App() {
 
           backdrop: `
     rgba(0,0,123,0.4)
-    url("/bat.gif")
+    url('../src/images/scoobe.gif')
     top
     no-repeat
   `,
@@ -83,7 +86,7 @@ function App() {
 
           backdrop: `
     rgba(0,0,123,0.4)
-    url("/scoobe.gif")
+    url("../src/images/bat.gif")
     top
     no-repeat
   `,
