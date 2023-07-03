@@ -45,7 +45,7 @@ function App() {
 
         backdrop: `
     rgba(0,0,123,0.4)
-    url("../src/images/dicap.gif")
+    url("/dicap.gif")
     top
     no-repeat
   `,
@@ -66,7 +66,7 @@ function App() {
 
           backdrop: `
     rgba(0,0,123,0.4)
-    url('../src/images/scoobe.gif')
+    url("/bat.gif")
     top
     no-repeat
   `,
@@ -86,7 +86,7 @@ function App() {
 
           backdrop: `
     rgba(0,0,123,0.4)
-    url("../src/images/bat.gif")
+    url("/scoobe.gif")
     top
     no-repeat
   `,
