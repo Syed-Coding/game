@@ -22,10 +22,20 @@ function App() {
   const [loader, setLoader] = useState(true);
 
   useEffect(() => {
+    // console.log("inside use 1");
     const timeout = setTimeout(() => {
-      setOpenModal(true);
       setLoader(false);
     }, 3000);
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
+  useEffect(() => {
+    // console.log("inside use 2");
+
+    const timeout = setTimeout(() => {
+      setOpenModal(true);
+    }, 5000);
     return () => {
       clearTimeout(timeout);
     };
